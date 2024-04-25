@@ -108,3 +108,46 @@ h3 {
   padding: 10px 10px;
   color: white;
 }
+
+/* Header CSS */
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color:white;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-item:hover .navbar-link {
+  background-color: #f3c0a9; /* Change background color on hover */
+}
+
+.navbar-link:hover {
+  color: #070707;
+}
+
+/* Active navigation item */
+.active .navbar-link {
+  color: #0c0b0b;
+  font-weight: bold;
+  font-size: 1.1em;
+  background-color: #eee0db; /* Apply background color to active item */
+}

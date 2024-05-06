@@ -4,19 +4,21 @@
   border: 1px solid #ddd; /* Lighter border color */
   border-radius: 5px;
   background-color: #fff; /* White background */
+  max-height: 710px;
+  overflow-y: auto;
 }
 .form-container > div h1{
 
-  color: rgb(83, 77, 77);
+  color: rgb(99, 69, 69);
 }
 
 .form-container > div h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
-  width:100%;
+  font-weight: bold;
+  width:fit-content;
   padding: 10px;
-  background-color: #d7e3f1;
-  color: rgb(47, 67, 122);
+  color: rgb(14, 32, 82);
 }
 
 .form-container > div h3 {
@@ -24,7 +26,7 @@
   font-size: 1.2rem;
   width:fit-content;
   padding: 10px;
-  background-color: #f5e9dd;
+  background: #e9e7e5;
   color: rgb(32, 31, 31);
 }
 
@@ -36,7 +38,6 @@
 /* Section Containers */
 .form-container > div {
   margin-bottom: 20px;
-  border: 1px solid #ddd; /* Lighter border color */
   padding: 20px;
   border-radius: 5px;
 }
@@ -49,7 +50,7 @@
 /* Two-column layout */
 .form-container .column-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
 }
 
 .form-container .column {
@@ -83,5 +84,197 @@
   }
 }
 
+/*CSS *//* Style for stud-fix-data section */
+.stud-fix-data {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  height: 200px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+.profile-img:hover{
+  box-shadow: 0 0 2px 1px rgba(10, 10, 10, 0.5);
+}
+
+.stud-name p {
+  font-size: 24px; /* Adjust based on your preference */
+  color: #333; /* Adjust based on your preference */
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color; 
+}
+.stud-name p:focus,
+.stud-name p:hover {
+  color: #294e74; /* Adjust based on your preference */
+}
+
+.stud-name p:focus:after,
+.stud-name p:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.stud-name p:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff; /* Adjust based on your preference */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
 
 
+.stud-details p {
+  margin: 5px 0;
+  font-weight: bold;
+  white-space: nowrap;
+  
+}
+.card {
+  width: 100%;
+  max-width: 1400px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #c9caca, #c0e8ff);
+  
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+}
+.card:hover{
+  transform: scale(1.02);
+  box-shadow:  15px 15px 30px #86a3bf,
+  -15px -15px 30px #e0ffff;
+
+}
+
+.card-body {
+  padding: 20px;
+}
+.card-body a{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  width: 5%;
+  
+}
+
+.card-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+
+
+.details {
+  margin-top: 20px; /* Add margin for spacing between title and details */
+}
+
+.details p {
+  margin: 0;
+}
+.details p > p {
+  font-weight: bold;
+  color: rgb(99, 5, 5);
+}
+
+.details span {
+  font-weight: bold;
+}
+
+.edu-details p{
+  margin: 0;
+}
+.edu-details p > p{
+  color: rgb(99, 5, 5);
+  font-weight: bold;
+}
+.edu-details span{
+  font-weight: bold;
+}
+
+.curricular-details p{
+  margin: 0;
+}
+.curricular-details p > p{
+  color: rgb(99, 5, 5);
+  font-weight: bold;
+}
+.curricular-details span{
+  font-weight: bold;
+}
+.certification-details p{
+  margin: 0;
+}
+.certification-details p > p{
+  color: rgb(99, 5, 5);
+  font-weight: bold;
+}
+.certification-details span{
+  font-weight: bold;
+}
+.project-details p{
+  margin: 0;
+}
+.project-details p > p{
+  color: rgb(99, 5, 5);
+  font-weight: bold;
+}
+.project-details span{
+  font-weight: bold;
+}
+
+/*Edit Button */
+.edit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.edit-button:active {
+  background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px);
+}
